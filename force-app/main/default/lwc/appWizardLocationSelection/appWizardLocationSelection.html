@@ -1,0 +1,22 @@
+<template>
+    <div class="scrollable">
+        <fieldset class="slds-form-element">
+            
+            <div class="slds-form-element__control">
+                <template for:each={addressesFound} for:item="address">
+                    <c-address-picker
+                        key={address.Id}
+                        address-id={address.Id}
+                        account-name={address.Account__r.Name}
+                        street1={address.Street_1__c}
+                        street2={address.Street_2__c}
+                        city={address.City__c}
+                        state={address.State__c}
+                        zip={address.Postal_Code__c}
+                        onaddressselectionchange={handleAddressSelectionChange}
+                    ></c-address-picker>
+                </template>
+            </div>
+        </fieldset>
+    </div>
+</template>

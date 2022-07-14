@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="street" type="String" label="street"/>
+            <property name="city" type="String" label="city"/>
+            <property name="state" type="String" label="state"/>
+            <property name="zip" type="String" label="zip"/>
+            <property name="country" type="String" label="country"/>
+            <property name="selectedAddressId" type="String" label="selectedAddressId" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
